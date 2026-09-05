@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JOMUL Construction Limited | Construction Experts in Kenya</title>
+<meta name="description" content="JOMUL Construction Limited delivers residential, commercial and industrial projects across Nairobi, backed by transparent pricing and a team that puts quality first.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+  :root{
+    --navy: #0F2A44;
+    --navy-2: #17395C;
+    --navy-deep: #0A1E32;
+    --green: #1E7A46;
+    --green-2: #2FA360;
+    --paper: #F3F4F0;
+    --paper-2: #ECEEE8;
+    --ink: #16211C;
+    --ink-soft: #46524B;
+    --line: #D8DED9;
+    --line-on-navy: rgba(255,255,255,0.16);
+    --white: #FFFFFF;
+    --max: 1160px;
+  }
+
+  *{ box-sizing: border-box; }
+  html{ scroll-behavior: smooth; }
+  body{
+    margin:0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Public Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1,h2,h3,h4{
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    line-height: 1.12;
+    margin: 0;
+    color: var(--navy);
+    letter-spacing: -0.01em;
+  }
+  p{ margin: 0; }
+  a{ color: inherit; text-decoration: none; }
+  ul{ margin:0; padding:0; list-style:none; }
+  img{ max-width:100%; display:block; }
+  button{ font-family: inherit; cursor:pointer; }
+
+  .wrap{ max-width: var(--max); margin: 0 auto; padding: 0 28px; }
+
+  .eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    font-size: 14px;
+    color: var(--green);
+    font-weight: 600;
+    margin-bottom: 14px;
+  }
+  .eyebrow::before{
+    content:"";
+    width: 9px; height: 9px;
+    background: var(--green);
+    display:inline-block;
+  }
+
+  a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible{
+    outline: 2px solid var(--green-2);
+    outline-offset: 3px;
+  }
+
+  /* ---------- reveal-on-scroll ---------- */
+  .reveal{ opacity:0; transform: translateY(18px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .reveal.in{ opacity:1; transform:none; }
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+    .reveal{ opacity:1; transform:none; transition:none; }
+  }
+
+  /* ---------- corner-bracket card motif ---------- */
+  .bracket{
+    position: relative;
+    border: 1px solid var(--line);
+    background: var(--white);
+    padding: 32px 28px;
+  }
+  .bracket::before, .bracket::after{
+    content:"";
+    position:absolute;
+    width: 16px; height: 16px;
+    border-color: var(--green);
+    border-style: solid;
+    border-width: 0;
+  }
+  .bracket::before{ top:-1px; left:-1px; border-top-width: 2px; border-left-width: 2px; }
+  .bracket::after{ bottom:-1px; right:-1px; border-bottom-width: 2px; border-right-width: 2px; }
+
+  /* ---------- header ---------- */
+  header{
+    position: sticky; top:0; z-index: 100;
+    background: rgba(243,244,240,0.94);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav{
+    display:flex; align-items:center; justify-content:space-between;
+    gap: 20px;
+    padding: 16px 0;
+  }
+  .logo{
+    display:flex; align-items:center; gap:11px;
+    flex-shrink:0;
+  }
+  .logo-mark{
+    width:34px; height:34px;
+    background: var(--navy);
+    position:relative;
+    flex-shrink:0;
+    overflow:hidden;
+  }
+  .logo-mark::before{
+    content:"";
+    position:absolute; inset: 7px;
+    background: var(--green);
+  }
+  .logo-mark img{
+    position:relative; z-index:1;
+    width:100%; height:100%; object-fit:cover;
+  }
+  .logo-text{ display:flex; flex-direction:column; line-height:1.2; }
+  .logo-name{
+    font-family:'Fraunces', serif; font-weight:700; font-size:19px; color: var(--navy);
+  }
+  .logo-sub{
+    font-family:'Public Sans', sans-serif; font-weight:500; font-size:10px;
+    letter-spacing:0.04em; color: var(--ink-soft); white-space:nowrap;
+  }
+  nav.links{ display:flex; gap:26px; flex-wrap:nowrap; }
+  nav.links a{
+    font-size: 14.5px; font-weight: 500; color: var(--ink);
+    position:relative; padding: 4px 0; white-space:nowrap;
+  }
+  nav.links a::after{
+    content:""; position:absolute; left:0; bottom:0;
+    width:0; height:2px; background: var(--green);
+    transition: width 0.2s ease;
+  }
+  nav.links a:hover::after{ width:100%; }
+  .head-actions{ display:flex; align-items:center; gap:16px; flex-shrink:0; }
+  .phone-pill{
+    display:flex; align-items:center; gap:8px;
+    font-weight:600; font-size:14px; color: var(--navy);
+    white-space:nowrap;
+  }
+  .phone-pill svg{ flex-shrink:0; }
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center;
+    padding: 12px 22px;
+    font-weight:600; font-size:15px;
+    border: none;
+    white-space: nowrap;
+    transition: background 0.18s ease, color 0.18s ease, transform 0.18s ease;
+  }
+  .btn:active{ transform: scale(0.97); }
+  .btn-green{ background: var(--green); color:#fff; }
+  .btn-green:hover{ background: var(--green-2); }
+  .btn-outline{ background: transparent; color: var(--navy); border:1.5px solid var(--navy); }
+  .btn-outline:hover{ background: var(--navy); color:#fff; }
+  .btn-navy{ background: var(--navy); color:#fff; }
+  .btn-navy:hover{ background: var(--navy-2); }
+
+  .burger{ display:none; background:none; border:none; padding:8px; flex-shrink:0; }
+  .burger span{ display:block; width:24px; height:2px; background: var(--navy); margin: 5px 0; }
+
+  /* ---------- hero ---------- */
+  .hero{
+    position: relative;
+    background: var(--navy);
+    color: #fff;
+    overflow:hidden;
+    padding: 40px 0 0;
+  }
+  .hero-photo{
+    position:absolute; inset:0; z-index:0;
+    background-image:
+      linear-gradient(160deg, rgba(10,30,50,0.88), rgba(30,122,70,0.55)),
+      url('https://res.cloudinary.com/hztm3zo8/image/upload/v1788594883/1788516767399_hmq73j.jpg');
+    background-size: cover; background-position: center;
+  }
+  .hero::before{
+    content:"";
+    position:absolute; inset:0; z-index:1;
+    background-image:
+      linear-gradient(var(--line-on-navy) 1px, transparent 1px),
+      linear-gradient(90deg, var(--line-on-navy) 1px, transparent 1px);
+    background-size: 64px 64px;
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,0.5), transparent 75%);
+    opacity: 0.6;
+  }
+  .hero-inner{ position:relative; z-index:2; display:grid; grid-template-columns: 1.15fr 0.85fr; gap: 40px; align-items:end; }
+  .hero-copy{ padding-bottom: 56px; }
+  .hero-copy .eyebrow{ color: var(--green-2); }
+  .hero-copy h1{
+    color:#fff;
+    font-size: clamp(38px, 4.6vw, 58px);
+    max-width: 13ch;
+    opacity:0; transform: translateY(16px);
+    animation: rise 0.7s ease forwards;
+  }
+  .hero-copy .sub{
+    margin-top: 22px;
+    max-width: 46ch;
+    color: rgba(255,255,255,0.82);
+    font-size: 17.5px;
+    opacity:0; transform: translateY(16px);
+    animation: rise 0.7s ease 0.15s forwards;
+  }
+  .hero-ctas{
+    margin-top: 34px; display:flex; gap: 14px; flex-wrap:wrap; align-items:center;
+    opacity:0; transform: translateY(16px);
+    animation: rise 0.7s ease 0.3s forwards;
+  }
+  .hero-ctas .btn-outline{ border-color: rgba(255,255,255,0.5); color:#fff; }
+  .hero-ctas .btn-outline:hover{ background:#fff; color: var(--navy); border-color:#fff; }
+  .hero-ctas .phone-line{ font-size:14.5px; color: rgba(255,255,255,0.8); }
+  .hero-ctas .phone-line a{ color:#fff; font-weight:700; border-bottom:1.5px solid var(--green-2); }
+  @keyframes rise{ to{ opacity:1; transform:none; } }
+
+  .hero-badge-col{
+    display:flex; flex-direction:column; gap:12px;
+    padding-bottom: 56px;
+    opacity:0; animation: rise 0.7s ease 0.45s forwards;
+  }
+  .hero-badge{
+    display:flex; align-items:center; gap:12px;
+    padding: 13px 16px;
+    border: 1px solid var(--line-on-navy);
+    background: rgba(255,255,255,0.05);
+    font-size: 14.5px; font-weight:500;
+  }
+  .hero-badge svg{ flex-shrink:0; color: var(--green-2); }
+
+  .hero-strip{ position:relative; z-index:2; border-top: 1px solid var(--line-on-navy); margin-top: 56px; }
+  .stats{ display:grid; grid-template-columns: repeat(4, 1fr); }
+  .stat{ padding: 30px 28px; border-right: 1px solid var(--line-on-navy); }
+  .stat:last-child{ border-right:none; }
+  .stat .num{ font-family:'Fraunces', serif; font-weight:600; font-size: 34px; color:#fff; display:flex; align-items:baseline; gap:2px; }
+  .stat .num span{ color: var(--green-2); font-size:22px; }
+  .stat .label{ margin-top:6px; font-size:13.5px; color: rgba(255,255,255,0.62); }
+
+  /* ---------- section basics ---------- */
+  section{ padding: 96px 0; }
+  .section-head{ max-width: 640px; margin-bottom: 52px; }
+  .section-head h2{ font-size: clamp(28px, 3vw, 38px); }
+  .section-head .sub{ margin-top:14px; color: var(--ink-soft); font-size: 16.5px; }
+
+  /* ---------- about ---------- */
+  .about{ background: var(--white); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+  .about-grid{ display:grid; grid-template-columns: 0.85fr 1.15fr; gap: 64px; align-items:start; }
+  .about-visual{ position:relative; aspect-ratio: 4/5; background: var(--navy); overflow:hidden; }
+  .about-visual svg{ position:absolute; inset:0; width:100%; height:100%; }
+  .about-visual img{
+    position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:1;
+  }
+  .about-badge{
+    position:absolute; z-index:2; bottom:16px; left:16px;
+    background: rgba(255,255,255,0.94); padding: 14px 18px;
+    display:flex; align-items:center; gap:12px;
+  }
+  .about-badge .num{ font-family:'Fraunces', serif; font-weight:700; font-size:22px; color: var(--green); }
+  .about-badge .txt{ font-size:12px; color: var(--ink-soft); font-weight:600; max-width:11ch; line-height:1.3; }
+  .about-copy p{ color: var(--ink-soft); margin-top: 16px; font-size: 16px; }
+  .values-list{ margin-top: 34px; display:flex; flex-direction:column; }
+  .value-row{ display:grid; grid-template-columns: 30px 1fr; gap:16px; padding: 18px 0; border-top: 1px solid var(--line); }
+  .value-row:last-child{ border-bottom: 1px solid var(--line); }
+  .value-row .mark{ width:9px; height:9px; background: var(--green); margin-top:8px; }
+  .value-row h4{ font-size: 16.5px; font-weight:600; }
+  .value-row p{ color: var(--ink-soft); font-size: 15px; margin-top:4px; }
+
+  /* ---------- services ---------- */
+  .services-grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border:1px solid var(--line); }
+  .service-card{ background: var(--white); padding: 36px 30px; position:relative; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+  .service-card:hover{ transform: translateY(-4px); box-shadow: 0 18px 34px rgba(15,42,68,0.1); z-index:1; }
+  .service-card .idx{ font-family:'Fraunces', serif; font-size:14px; color: var(--green); font-weight:600; }
+  .service-card h3{ font-size: 20px; margin-top: 14px; }
+  .service-card p{ margin-top: 12px; color: var(--ink-soft); font-size:15px; }
+
+  /* ---------- why us ---------- */
+  .why{ background: var(--navy-deep); color:#fff; }
+  .why .section-head h2{ color:#fff; }
+  .why .section-head .sub{ color: rgba(255,255,255,0.65); }
+  .why-banner{ position:relative; aspect-ratio: 21/8; margin-bottom: 40px; overflow:hidden; }
+  .why-banner .fallback{
+    position:absolute; inset:0;
+    background:
+      repeating-linear-gradient(135deg, rgba(255,255,255,0.05) 0 22px, transparent 22px 44px),
+      linear-gradient(120deg, var(--navy-2), var(--green));
+  }
+  .why-banner img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:1; }
+  .why-grid{ display:grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: var(--line-on-navy); border:1px solid var(--line-on-navy); }
+  .why-card{ background: var(--navy-deep); padding: 34px 28px; transition: background 0.2s ease; }
+  .why-card:hover{ background: #0d2740; }
+  .why-card h3{ color:#fff; font-size:18.5px; }
+  .why-card p{ margin-top:10px; color: rgba(255,255,255,0.6); font-size: 14.5px; }
+  .why-card .num{ font-family:'Fraunces', serif; color: var(--green-2); font-size:15px; font-weight:600; margin-bottom:12px; display:block; }
+
+  /* ---------- process ---------- */
+  .process{ background: var(--paper); }
+  .process-grid{ display:grid; grid-template-columns: repeat(4, 1fr); gap: 28px; }
+  .process-step{ position:relative; padding-top: 26px; }
+  .process-step::before{ content:""; position:absolute; top:0; left:0; width: 40px; height: 2px; background: var(--green); }
+  .process-step .num{ font-family:'Fraunces', serif; font-size: 40px; color: var(--line); font-weight:600; }
+  .process-step h4{ font-size: 18px; margin-top: 4px; }
+  .process-step p{ margin-top:10px; color: var(--ink-soft); font-size: 14.5px; }
+
+  /* ---------- quote strip ---------- */
+  .quote-strip{
+    position:relative; color:#fff; overflow:hidden; padding: 84px 0;
+  }
+  .quote-strip-bg{
+    position:absolute; inset:0; z-index:0;
+    background-image:
+      linear-gradient(120deg, rgba(10,30,50,0.92), rgba(30,122,70,0.78)),
+      url('https://res.cloudinary.com/hztm3zo8/image/upload/v1788594921/4aeb4778cb56ffc4947e9901727b94d4_kks4jx.jpg');
+    background-size:cover; background-position:center;
+  }
+  .quote-strip .wrap{ position:relative; z-index:1; }
+  .quote-strip blockquote{
+    font-family:'Fraunces', serif; font-weight:600; margin:0;
+    font-size: clamp(24px,4vw,34px); line-height:1.32; max-width: 22ch;
+  }
+  .quote-strip cite{ display:block; margin-top:20px; font-style:normal; font-size:14px; color: rgba(255,255,255,0.75); font-weight:600; }
+
+  /* ---------- projects ---------- */
+  .filters{ display:flex; gap:10px; margin-bottom: 36px; flex-wrap:wrap; }
+  .filter-btn{ padding: 10px 18px; font-size:14.5px; font-weight:600; background: transparent; border: 1px solid var(--line); color: var(--ink-soft); transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease; }
+  .filter-btn.active{ background: var(--navy); border-color: var(--navy); color:#fff; }
+  .projects-grid{ display:grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+  .project-card{ background: var(--white); border: 1px solid var(--line); overflow:hidden; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+  .project-card:hover{ transform: translateY(-4px); box-shadow: 0 18px 34px rgba(15,42,68,0.12); }
+  .project-thumb{ aspect-ratio: 4/3; position:relative; overflow:hidden; }
+  .project-thumb svg{ position:relative; width:100%; height:100%; display:block; z-index:0; }
+  .project-thumb img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:1; }
+  .project-tag{ position:absolute; top:14px; left:14px; z-index:2; background: rgba(15,42,68,0.85); color:#fff; font-size:12px; font-weight:600; padding: 6px 12px; }
+  .project-body{ padding: 22px 24px 26px; }
+  .project-body h3{ font-size:18px; }
+  .project-body p{ margin-top:8px; color: var(--ink-soft); font-size:14.5px; }
+  .project-card[hidden]{ display:none; }
+
+  /* ---------- testimonials ---------- */
+  .testimonials{ background: var(--white); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+  .test-grid{ display:grid; grid-template-columns: repeat(3,1fr); gap: 26px; }
+  .test-card{ border-left: 3px solid var(--green); padding: 6px 0 6px 24px; }
+  .test-stars{ color: var(--green); font-size:15px; letter-spacing:2px; }
+  .test-card p.quote{ margin-top:14px; font-family:'Fraunces', serif; font-size:17px; color: var(--navy); line-height:1.5; }
+  .test-card .who{ margin-top: 18px; font-size:14px; font-weight:600; color: var(--ink); }
+  .test-card .role{ font-size:13px; color: var(--ink-soft); margin-top:2px; }
+
+  /* ---------- areas ---------- */
+  .areas-grid{ display:grid; grid-template-columns: 0.85fr 1.15fr; gap: 64px; align-items:center; }
+  .areas-visual{ position:relative; aspect-ratio: 4/3; background: var(--navy); overflow:hidden; }
+  .areas-visual svg{ position:relative; width:100%; height:100%; display:block; }
+  .areas-visual img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:1; }
+  .area-chips{ display:flex; flex-wrap:wrap; gap:12px; }
+  .area-chip{ padding: 11px 20px; border:1px solid var(--line); background:#fff; font-size:14.5px; font-weight:500; color: var(--navy); }
+
+  /* ---------- faq ---------- */
+  .faq{ background: var(--paper-2); }
+  .faq-list{ max-width: 780px; }
+  .faq-item{ border-bottom: 1px solid var(--line); }
+  .faq-item summary{ list-style:none; display:flex; align-items:center; justify-content:space-between; gap:20px; padding: 22px 4px; font-weight:600; font-size:16.5px; color: var(--navy); cursor:pointer; }
+  .faq-item summary::-webkit-details-marker{ display:none; }
+  .faq-item .plus{ width:22px; height:22px; position:relative; flex-shrink:0; }
+  .faq-item .plus::before, .faq-item .plus::after{ content:""; position:absolute; background: var(--green); }
+  .faq-item .plus::before{ top:50%; left:0; width:100%; height:2px; transform:translateY(-50%); }
+  .faq-item .plus::after{ left:50%; top:0; height:100%; width:2px; transform:translateX(-50%); transition: transform 0.2s ease, opacity 0.2s ease; }
+  .faq-item[open] .plus::after{ transform:translateX(-50%) rotate(90deg); opacity:0; }
+  .faq-item .faq-a{ padding: 0 4px 24px; color: var(--ink-soft); font-size: 15.5px; max-width: 62ch; }
+
+  /* ---------- quote form ---------- */
+  .quote-form-section{ background: var(--white); }
+  .form-grid{ display:grid; grid-template-columns: 1.2fr 0.8fr; gap: 56px; align-items:start; }
+  .form-card{ padding: 36px; }
+  .field-row{ display:grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-bottom: 18px; }
+  .field{ display:flex; flex-direction:column; gap:7px; margin-bottom: 18px; }
+  .field-row .field{ margin-bottom:0; }
+  .field label{ font-size:13.5px; font-weight:600; color: var(--navy); }
+  .field input, .field select, .field textarea{
+    font-family: inherit; font-size:15px; padding: 12px 14px;
+    border: 1px solid var(--line); background: var(--paper); color: var(--ink);
+  }
+  .field textarea{ resize: vertical; min-height: 96px; }
+  .form-note{ margin-top:18px; font-size:13.5px; color: var(--ink-soft); }
+  .quote-side .bracket{ margin-bottom: 20px; }
+  .quote-side h4{ font-size:16px; margin-bottom:6px; }
+  .quote-side p{ font-size:14.5px; color: var(--ink-soft); }
+  .quote-side .contact-line{ display:flex; align-items:center; gap:10px; margin-top:10px; font-weight:600; color: var(--navy); font-size:15px; }
+
+  /* ---------- cta ---------- */
+  .cta-band{ background: var(--green); color:#fff; padding: 68px 0; }
+  .cta-inner{ display:flex; align-items:center; justify-content:space-between; gap: 30px; flex-wrap:wrap; }
+  .cta-inner h2{ color:#fff; font-size: clamp(24px,3vw,32px); max-width: 20ch; }
+  .cta-inner .actions{ display:flex; gap:14px; flex-wrap:wrap; }
+  .cta-band .btn-navy{ background: var(--navy); }
+  .cta-band .btn-outline{ border-color: rgba(255,255,255,0.6); color:#fff; }
+  .cta-band .btn-outline:hover{ background:#fff; color: var(--green); }
+
+  /* ---------- footer ---------- */
+  footer{ background: var(--navy-deep); color: rgba(255,255,255,0.75); padding: 72px 0 28px; }
+  .foot-grid{ display:grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 48px; border-bottom: 1px solid var(--line-on-navy); }
+  .foot-logo{ display:flex; align-items:center; gap:11px; color:#fff; font-family:'Fraunces', serif; font-weight:700; font-size:19px; margin-bottom:16px; }
+  .foot-about p{ font-size: 14.5px; line-height:1.7; max-width: 34ch; }
+  .foot-social{ display:flex; gap:10px; margin-top:20px; }
+  .foot-social a{
+    width:38px; height:38px; display:flex; align-items:center; justify-content:center;
+    background: rgba(255,255,255,0.07); color:#fff; transition: background 0.18s ease;
+  }
+  .foot-social a:hover{ background: var(--green); }
+  footer h4{ color:#fff; font-size:14.5px; font-weight:600; margin-bottom:18px; }
+  footer .foot-links li{ margin-bottom: 11px; font-size:14.5px; }
+  footer .foot-links a:hover{ color: var(--green-2); }
+  .foot-bottom{ display:flex; justify-content:space-between; align-items:center; padding-top: 26px; font-size:13.5px; flex-wrap:wrap; gap:12px; }
+  .foot-bottom .legal a{ margin-left: 20px; }
+
+  /* ---------- whatsapp float ---------- */
+  .wa-float{
+    position:fixed; bottom:22px; right:22px; z-index:90;
+    width:56px; height:56px; border-radius:50%;
+    background:#25D366; display:flex; align-items:center; justify-content:center;
+    color:#fff; box-shadow: 0 10px 24px rgba(0,0,0,0.25);
+    transition: transform 0.18s ease;
+  }
+  .wa-float:hover{ transform: scale(1.08); }
+
+  /* ---------- responsive ---------- */
+  @media (max-width: 1080px){
+    nav.links{ display:none; }
+    .phone-pill{ display:none; }
+    .burger{ display:block; }
+  }
+  @media (max-width: 980px){
+    .hero-inner{ grid-template-columns: 1fr; }
+    .hero-badge-col{ padding-bottom: 0; }
+    .stats{ grid-template-columns: repeat(2,1fr); }
+    .stat:nth-child(2){ border-right:none; }
+    .stat{ border-bottom:1px solid var(--line-on-navy); }
+    .about-grid, .areas-grid, .form-grid{ grid-template-columns: 1fr; }
+    .about-visual, .areas-visual{ aspect-ratio: 16/9; }
+    .services-grid, .why-grid{ grid-template-columns: repeat(2,1fr); }
+    .process-grid{ grid-template-columns: repeat(2,1fr); row-gap: 40px; }
+    .projects-grid, .test-grid{ grid-template-columns: repeat(2,1fr); }
+    .foot-grid{ grid-template-columns: 1fr 1fr; row-gap: 36px; }
+  }
+  @media (max-width: 700px){
+    .stats{ grid-template-columns: 1fr 1fr; }
+    .services-grid, .why-grid, .projects-grid, .test-grid{ grid-template-columns: 1fr; }
+    .process-grid{ grid-template-columns: 1fr 1fr; }
+    .foot-grid{ grid-template-columns: 1fr; }
+    .cta-inner{ flex-direction:column; align-items:flex-start; }
+    .field-row{ grid-template-columns: 1fr; }
+    section{ padding: 64px 0; }
+  }
+
+  .mobile-panel{
+    position: fixed; inset: 0 0 0 auto; width: min(320px, 84vw);
+    background: var(--navy); color:#fff;
+    transform: translateX(100%); transition: transform 0.3s ease;
+    z-index: 200; padding: 28px 26px; display:flex; flex-direction:column; gap: 22px;
+  }
+  .mobile-panel.open{ transform: translateX(0); }
+  .mobile-panel a{ font-size: 17px; font-weight:600; }
+  .mobile-panel .close-x{ align-self:flex-end; background:none; border:none; color:#fff; font-size:26px; line-height:1; }
+  .scrim{ position:fixed; inset:0; background: rgba(10,20,32,0.5); z-index:150; opacity:0; pointer-events:none; transition: opacity 0.3s ease; }
+  .scrim.show{ opacity:1; pointer-events:auto; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="logo">
+      <span class="logo-mark">
+        <img src="https://res.cloudinary.com/hztm3zo8/image/upload/v1788594837/1788516485103_nzmh4o.jpg" alt="JOMUL Construction Limited logo" onerror="this.style.display='none'">
+      </span>
+      <span class="logo-text">
+        <span class="logo-name">JOMUL</span>
+        <span class="logo-sub">CONSTRUCTION LIMITED</span>
+      </span>
+    </a>
+    <nav class="links">
+      <a href="#top">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="head-actions">
+      <a class="phone-pill" href="tel:+254726066474">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.4 21 3 13.6 3 4.9c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1L6.6 10.8z" stroke="#0F2A44" stroke-width="1.6"/></svg>
+        0726 066474
+      </a>
+      <a class="btn btn-green" href="#quote">Request a Quote</a>
+      <button class="burger" aria-label="Open menu" id="burgerBtn"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="scrim" id="scrim"></div>
+<div class="mobile-panel" id="mobilePanel">
+  <button class="close-x" id="closeBtn" aria-label="Close menu">&times;</button>
+  <a href="#top">Home</a>
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#projects">Projects</a>
+  <a href="#faq">FAQ</a>
+  <a href="#contact">Contact</a>
+  <a href="tel:+254726066474">Call 0726 066474</a>
+</div>
+
+<div id="top"></div>
+
+<section class="hero">
+  <div class="hero-photo"></div>
+  <div class="wrap">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <h1>Constructing your dreams, one brick at a time</h1>
+        <p class="sub">JOMUL Construction Limited delivers residential, commercial and industrial projects across Nairobi, backed by transparent pricing and a team that puts quality first.</p>
+        <div class="hero-ctas">
+          <a href="https://wa.me/254726066474?text=Hi%20JOMUL%20Construction%2C%20I%27d%20like%20to%20get%20a%20quote%20for%20my%20construction%20project." target="_blank" rel="noopener" class="btn btn-green">Request a Free Quote</a>
+          <a href="#projects" class="btn btn-outline">See Our Work</a>
+        </div>
+        <p class="phone-line" style="margin-top:20px;">Talk to us directly on <a href="tel:+254726066474">0726 066474</a></p>
+      </div>
+      <div class="hero-badge-col">
+        <div class="hero-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Registered &amp; Licensed</div>
+        <div class="hero-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>10+ Years Experience</div>
+        <div class="hero-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Transparent Pricing</div>
+        <div class="hero-badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Nairobi Based</div>
+      </div>
+    </div>
+    <div class="hero-strip">
+      <div class="stats" id="statsGrid">
+        <div class="stat"><div class="num" data-target="10"><span class="count">0</span><span>+</span></div><div class="label">Years in construction</div></div>
+        <div class="stat"><div class="num" data-target="50"><span class="count">0</span><span>+</span></div><div class="label">Projects delivered</div></div>
+        <div class="stat"><div class="num" data-target="100"><span class="count">0</span><span>%</span></div><div class="label">Client satisfaction</div></div>
+        <div class="stat"><div class="num" data-target="6"><span class="count">0</span><span>+</span></div><div class="label">Specialist crew members</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div class="about-visual reveal">
+      <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+        <rect width="400" height="500" fill="#0F2A44"/>
+        <g stroke="#1E7A46" stroke-width="1.5" opacity="0.55">
+          <line x1="0" y1="120" x2="400" y2="120"/><line x1="0" y1="250" x2="400" y2="250"/><line x1="0" y1="380" x2="400" y2="380"/>
+          <line x1="130" y1="0" x2="130" y2="500"/><line x1="270" y1="0" x2="270" y2="500"/>
+        </g>
+        <rect x="60" y="150" width="130" height="230" fill="none" stroke="#2FA360" stroke-width="2.5"/>
+        <rect x="210" y="90" width="150" height="290" fill="none" stroke="#2FA360" stroke-width="2.5"/>
+        <rect x="90" y="200" width="35" height="40" fill="#2FA360" opacity="0.35"/>
+        <rect x="140" y="200" width="35" height="40" fill="#2FA360" opacity="0.35"/>
+        <rect x="90" y="270" width="35" height="40" fill="#2FA360" opacity="0.35"/>
+        <rect x="140" y="270" width="35" height="40" fill="#2FA360" opacity="0.35"/>
+        <rect x="240" y="140" width="35" height="45" fill="#2FA360" opacity="0.35"/>
+        <rect x="300" y="140" width="35" height="45" fill="#2FA360" opacity="0.35"/>
+        <rect x="240" y="220" width="35" height="45" fill="#2FA360" opacity="0.35"/>
+        <rect x="300" y="220" width="35" height="45" fill="#2FA360" opacity="0.35"/>
+        <rect x="240" y="300" width="35" height="45" fill="#2FA360" opacity="0.35"/>
+        <rect x="300" y="300" width="35" height="45" fill="#2FA360" opacity="0.35"/>
+      </svg>
+      <img src="https://res.cloudinary.com/hztm3zo8/image/upload/v1788596065/1788595762938_vfuy4f.jpg" alt="JOMUL Construction team on site" loading="lazy" onerror="this.style.display='none'">
+      <div class="about-badge"><span class="num">10+</span><span class="txt">Years delivering quality builds</span></div>
+    </div>
+    <div class="about-copy reveal">
+      <span class="eyebrow">About JOMUL Construction</span>
+      <h2>Your trusted construction partner in Nairobi</h2>
+      <p>JOMUL Construction Limited specialises in high quality construction across residential, commercial and industrial sectors. Before we break ground, we walk every client through the full plan so you understand exactly where your room, office or factory floor will sit. No surprises, just a shared understanding from day one.</p>
+      <p>Customer satisfaction is our number one priority, and our clients keep coming back because we deliver on that promise every time.</p>
+      <div class="values-list">
+        <div class="value-row"><span class="mark"></span><div><h4>Quality by design</h4><p>Intelligent effort at every stage of the build, never left to chance.</p></div></div>
+        <div class="value-row"><span class="mark"></span><div><h4>Integrity and honesty</h4><p>We read from the same page as every stakeholder on the job.</p></div></div>
+        <div class="value-row"><span class="mark"></span><div><h4>Competitive rates</h4><p>Genuine value for money, without cutting corners on quality.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">What we build</span>
+      <h2>Construction services for every sector</h2>
+      <p class="sub">From a family home to a full industrial facility, we bring the same discipline and attention to detail to every site we manage.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card"><span class="idx">01</span><h3>Residential Construction</h3><p>New homes, extensions and renovations, built around how your family actually lives, from foundation to finishes.</p></div>
+      <div class="service-card"><span class="idx">02</span><h3>Commercial Construction</h3><p>Offices, retail spaces and mixed-use buildings delivered on schedule, so your business can open its doors on time.</p></div>
+      <div class="service-card"><span class="idx">03</span><h3>Industrial Construction</h3><p>Warehouses, workshops and production facilities engineered for durability and everyday operational demands.</p></div>
+      <div class="service-card"><span class="idx">04</span><h3>Renovation &amp; Remodeling</h3><p>Upgrades and refurbishments that modernise your space while respecting the original structure and budget.</p></div>
+      <div class="service-card"><span class="idx">05</span><h3>Project Management</h3><p>End-to-end supervision covering budgeting, scheduling and contractor coordination for a smooth build.</p></div>
+      <div class="service-card" style="display:flex; flex-direction:column; justify-content:center; background:var(--paper-2);">
+        <h3 style="font-size:19px;">Need something specific?</h3>
+        <p style="margin-top:10px;">Tell us about your site and we'll scope the right service for it.</p>
+        <a href="#quote" class="btn btn-outline" style="margin-top:18px; width:fit-content;">Contact Us Today</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow" style="color:var(--green-2);">Why choose us</span>
+      <h2>Built on trust, delivered with precision</h2>
+      <p class="sub">Here is what clients can expect when they work with JOMUL Construction Limited.</p>
+    </div>
+    <div class="why-banner reveal">
+      <div class="fallback"></div>
+      <img src="https://res.cloudinary.com/hztm3zo8/image/upload/v1788596017/1788593751331_nha8nu.jpg" alt="JOMUL Construction crew working on site" loading="lazy" onerror="this.style.display='none'">
+    </div>
+    <div class="why-grid">
+      <div class="why-card"><span class="num">01</span><h3>Registered &amp; Licensed</h3><p>A fully registered construction company operating to recognised industry standards.</p></div>
+      <div class="why-card"><span class="num">02</span><h3>On-Time Delivery</h3><p>Realistic timelines and consistent site management to keep your project moving.</p></div>
+      <div class="why-card"><span class="num">03</span><h3>Transparent Pricing</h3><p>Clear, competitive quotes with no hidden costs added once work begins.</p></div>
+      <div class="why-card"><span class="num">04</span><h3>Quality Materials</h3><p>We source durable, code-compliant materials suited to the local climate and terrain.</p></div>
+      <div class="why-card"><span class="num">05</span><h3>Experienced Crew</h3><p>Skilled site supervisors and tradespeople who have delivered dozens of projects together.</p></div>
+      <div class="why-card"><span class="num">06</span><h3>Client-Centred Process</h3><p>We keep you informed at every milestone, from groundbreaking to final walkthrough.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="process">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">How we work</span>
+      <h2>A clear process from consultation to handover</h2>
+      <p class="sub">We keep every stakeholder aligned, so there are no surprises once construction begins.</p>
+    </div>
+    <div class="process-grid">
+      <div class="process-step"><div class="num">01</div><h4>Consultation and site walk</h4><p>We meet on site or discuss over the phone to understand your vision, budget and timeline.</p></div>
+      <div class="process-step"><div class="num">02</div><h4>Planning and sign-off</h4><p>We walk you through the layout so you know exactly where every room and section will sit before we start.</p></div>
+      <div class="process-step"><div class="num">03</div><h4>Construction</h4><p>Our team executes the build with regular updates, keeping quality and safety at the centre of the work.</p></div>
+      <div class="process-step"><div class="num">04</div><h4>Handover</h4><p>We walk the finished site with you and hand over a building you are proud to call yours.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="quote-strip">
+  <div class="quote-strip-bg"></div>
+  <div class="wrap reveal">
+    <blockquote>Quality is never an accident. It is always the result of intelligent effort.</blockquote>
+    <cite>JOMUL Construction Limited</cite>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Our work</span>
+      <h2>Projects our clients are proud of</h2>
+      <p class="sub">A glimpse at what we have delivered across Nairobi and beyond.</p>
+    </div>
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all">All Projects</button>
+      <button class="filter-btn" data-filter="residential">Residential</button>
+      <button class="filter-btn" data-filter="commercial">Commercial</button>
+      <button class="filter-btn" data-filter="industrial">Industrial</button>
+    </div>
+    <div class="projects-grid" id="projectsGrid"></div>
+  </div>
+</section>
+
+<section class="testimonials">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Client feedback</span>
+      <h2>What our clients say</h2>
+      <p class="sub">Real feedback from clients we have delivered projects for.</p>
+    </div>
+    <div class="test-grid">
+      <div class="test-card"><div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="quote">"JOMUL walked us through the full layout before laying a single block. The finished home matched exactly what we agreed on."</p><div class="who">Mary Wanjiru</div><div class="role">Residential Client</div></div>
+      <div class="test-card"><div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="quote">"Professional from the first site visit to handover. Our office fit-out was completed on schedule and within budget."</p><div class="who">Ed Mutende</div><div class="role">Commercial Client</div></div>
+      <div class="test-card"><div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="quote">"Highly recommended for all your construction needs from designing to execution. A most professional entity there is, with pocket friendly rates.Talk to them today!"</p><div class="who">Michael Ochieng</div><div class="role">Industrial Client</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="areas">
+  <div class="wrap areas-grid">
+    <div class="areas-visual reveal">
+      <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+        <rect width="400" height="300" fill="#0F2A44"/>
+        <g stroke="#2FA360" stroke-width="1" opacity="0.4">
+          <circle cx="200" cy="150" r="60" fill="none"/><circle cx="200" cy="150" r="100" fill="none"/><circle cx="200" cy="150" r="140" fill="none"/>
+        </g>
+        <circle cx="200" cy="150" r="6" fill="#2FA360"/>
+        <circle cx="150" cy="110" r="4" fill="#2FA360" opacity="0.8"/>
+        <circle cx="260" cy="120" r="4" fill="#2FA360" opacity="0.8"/>
+        <circle cx="140" cy="190" r="4" fill="#2FA360" opacity="0.8"/>
+        <circle cx="270" cy="200" r="4" fill="#2FA360" opacity="0.8"/>
+        <circle cx="200" cy="80" r="4" fill="#2FA360" opacity="0.8"/>
+      </svg>
+      <img src="https://res.cloudinary.com/hztm3zo8/image/upload/v1788599213/00e52800d1c8d7d72777b568f866dba9_b8wfkw.jpg" alt="Nairobi skyline" loading="lazy" onerror="this.style.display='none'">
+    </div>
+    <div>
+      <div class="section-head reveal">
+        <span class="eyebrow">Areas we serve</span>
+        <h2>Building across Nairobi and beyond</h2>
+        <p class="sub">We take on projects across the greater Nairobi area and are open to travelling for the right project.</p>
+      </div>
+      <div class="area-chips reveal">
+        <span class="area-chip">Nairobi CBD</span><span class="area-chip">Kilimani</span><span class="area-chip">Karen</span>
+        <span class="area-chip">Runda</span><span class="area-chip">Kiambu</span><span class="area-chip">Ruaka</span>
+        <span class="area-chip">Ngong</span><span class="area-chip">Athi River</span><span class="area-chip">Machakos</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Frequently asked questions</span>
+      <h2>Answers before you get started</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item" open>
+        <summary>Do you offer free quotes?<span class="plus"></span></summary>
+        <div class="faq-a">Yes. Reach out with your project details and location, and we will schedule a site visit or phone consultation to prepare a free, no-obligation quote.</div>
+      </details>
+      <details class="faq-item">
+        <summary>How long does a typical project take?<span class="plus"></span></summary>
+        <div class="faq-a">Timelines depend on scope and size. A standard residential build typically runs several months, while smaller renovation work can be completed in a matter of weeks. We confirm a realistic timeline before work begins.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Do you assist with permits and approvals?<span class="plus"></span></summary>
+        <div class="faq-a">We guide clients through the documentation and approvals required for their specific project and location, working alongside relevant authorities where needed.</div>
+      </details>
+      <details class="faq-item">
+        <summary>What areas do you cover?<span class="plus"></span></summary>
+        <div class="faq-a">We are based in Nairobi and serve the greater Nairobi area, including Kilimani, Karen, Kiambu, Ruaka and surrounding towns. We are open to projects further afield on request.</div>
+      </details>
+      <details class="faq-item">
+        <summary>How do I get started?<span class="plus"></span></summary>
+        <div class="faq-a">Message us on WhatsApp or call 0726 066474 with a short description of your project. We will arrange a consultation and take it from there.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="quote-form-section" id="quote">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Get a quote</span>
+      <h2>Start your project conversation</h2>
+      <p class="sub">Share the essentials and we'll open a WhatsApp chat with your details filled in, ready to send.</p>
+    </div>
+    <div class="form-grid">
+      <form class="form-card bracket reveal" id="quoteForm">
+        <div class="field-row">
+          <div class="field"><label for="qName">Full name</label><input type="text" id="qName" name="qName" required placeholder="Jane Mwangi"></div>
+          <div class="field"><label for="qPhone">Phone number</label><input type="tel" id="qPhone" name="qPhone" required placeholder="07XX XXX XXX"></div>
+        </div>
+        <div class="field-row">
+          <div class="field"><label for="qType">Project type</label>
+            <select id="qType" name="qType">
+              <option value="">Select project type</option>
+              <option>Residential Construction</option>
+              <option>Commercial Construction</option>
+              <option>Industrial Construction</option>
+              <option>Renovation &amp; Remodeling</option>
+              <option>Project Management</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="field"><label for="qLocation">Project location</label><input type="text" id="qLocation" name="qLocation" placeholder="e.g. Karen, Nairobi"></div>
+        </div>
+        <div class="field"><label for="qMessage">Project description</label><textarea id="qMessage" name="qMessage" placeholder="Tell us a little about what you'd like to build..."></textarea></div>
+        <button type="submit" class="btn btn-green" style="width:100%; margin-top:6px;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="margin-right:8px;"><path d="M12.01 2C6.5 2 2 6.48 2 12c0 1.84.5 3.55 1.36 5.03L2 22l5.12-1.34A9.96 9.96 0 0012 22c5.52 0 10-4.48 10-10S17.53 2 12.01 2zm0 18.14c-1.62 0-3.14-.47-4.42-1.29l-.32-.19-3.03.8.81-2.95-.2-.3A8.13 8.13 0 013.87 12c0-4.49 3.65-8.14 8.14-8.14S20.15 7.51 20.15 12s-3.65 8.14-8.14 8.14zm4.48-6.07c-.24-.12-1.44-.71-1.66-.79-.22-.08-.39-.12-.55.12-.16.24-.63.79-.78.95-.14.16-.28.18-.53.06-.24-.12-1.02-.38-1.95-1.2-.72-.64-1.2-1.44-1.35-1.68-.14-.24-.02-.37.11-.49.11-.11.24-.28.36-.43.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.32-.75-1.8-.2-.48-.4-.42-.55-.42h-.47c-.16 0-.42.06-.64.3-.22.24-.85.83-.85 2.02s.87 2.35.99 2.51c.12.16 1.72 2.63 4.17 3.68.58.25 1.04.4 1.39.51.58.19 1.11.16 1.53.1.47-.07 1.44-.59 1.64-1.15.2-.57.2-1.06.14-1.15-.06-.1-.22-.16-.46-.28z"/></svg>
+          Send via WhatsApp
+        </button>
+        <p class="form-note">This opens WhatsApp with your details pre-filled — you send the message yourself, nothing is submitted automatically.</p>
+      </form>
+      <div class="quote-side reveal">
+        <div class="bracket">
+          <h4>Quick chat</h4>
+          <p>Prefer to talk right away? Message us directly on WhatsApp.</p>
+          <div class="contact-line">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="color:#25D366;"><path d="M12.01 2C6.5 2 2 6.48 2 12c0 1.84.5 3.55 1.36 5.03L2 22l5.12-1.34A9.96 9.96 0 0012 22c5.52 0 10-4.48 10-10S17.53 2 12.01 2z"/></svg>
+            <a href="https://wa.me/254726066474" target="_blank" rel="noopener">0726 066474</a>
+          </div>
+        </div>
+        <div class="bracket">
+          <h4>Email us</h4>
+          <p>Send over drawings or documents directly.</p>
+          <div class="contact-line">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.8"><path d="M3 6h18v12H3z"/><path d="M3 6l9 7 9-7"/></svg>
+            <a href="mailto:jomulconstruction15@gmail.com">jomulconstruction15@gmail.com</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap cta-inner">
+    <h2>Let's talk about your next construction project</h2>
+    <div class="actions">
+      <a class="btn btn-navy" href="https://wa.me/254726066474?text=Hello%20JOMUL%20Construction%2C%20I%20would%20like%20to%20discuss%20a%20project" target="_blank" rel="noopener">Chat on WhatsApp</a>
+      <a class="btn btn-outline" href="tel:+254726066474">Call 0726 066474</a>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-about">
+        <div class="foot-logo"><span class="logo-mark">
+        <img src="https://res.cloudinary.com/hztm3zo8/image/upload/v1788594837/1788516485103_nzmh4o.jpg" alt="JOMUL Construction Limited logo" onerror="this.style.display='none'"></span>JOMUL Construction Limited</div>
+        <p>Your trusted construction partner, delivering residential, commercial and industrial projects across Nairobi, Kenya.</p>
+        <div class="foot-social">
+          <a href="https://www.facebook.com/profile.php?id=61581869002649" target="_blank" rel="noopener" aria-label="JOMUL Construction on Facebook">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7.5h2.5l.5-3H13.5V8.5c0-.87.25-1.46 1.5-1.46H16.5V4.36C16.15 4.31 15 4.2 13.65 4.2c-2.8 0-4.65 1.7-4.65 4.83V10.5H6.5v3H9v7.5h4.5z"/></svg>
+          </a>
+          <a href="https://wa.me/254726066474" target="_blank" rel="noopener" aria-label="Chat with JOMUL Construction on WhatsApp">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12.01 2C6.5 2 2 6.48 2 12c0 1.84.5 3.55 1.36 5.03L2 22l5.12-1.34A9.96 9.96 0 0012 22c5.52 0 10-4.48 10-10S17.53 2 12.01 2zm0 18.14c-1.62 0-3.14-.47-4.42-1.29l-.32-.19-3.03.8.81-2.95-.2-.3A8.13 8.13 0 013.87 12c0-4.49 3.65-8.14 8.14-8.14S20.15 7.51 20.15 12s-3.65 8.14-8.14 8.14zm4.48-6.07c-.24-.12-1.44-.71-1.66-.79-.22-.08-.39-.12-.55.12-.16.24-.63.79-.78.95-.14.16-.28.18-.53.06-.24-.12-1.02-.38-1.95-1.2-.72-.64-1.2-1.44-1.35-1.68-.14-.24-.02-.37.11-.49.11-.11.24-.28.36-.43.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.32-.75-1.8-.2-.48-.4-.42-.55-.42h-.47c-.16 0-.42.06-.64.3-.22.24-.85.83-.85 2.02s.87 2.35.99 2.51c.12.16 1.72 2.63 4.17 3.68.58.25 1.04.4 1.39.51.58.19 1.11.16 1.53.1.47-.07 1.44-.59 1.64-1.15.2-.57.2-1.06.14-1.15-.06-.1-.22-.16-.46-.28z"/></svg>
+          </a>
+          <a href="mailto:jomulconstruction15@gmail.com" aria-label="Email JOMUL Construction">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h18v12H3z"/><path d="M3 6l9 7 9-7"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h4>Navigate</h4>
+        <ul class="foot-links">
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul class="foot-links">
+          <li><a href="#services">Residential Construction</a></li>
+          <li><a href="#services">Commercial Construction</a></li>
+          <li><a href="#services">Industrial Construction</a></li>
+          <li><a href="#services">Renovation &amp; Remodeling</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; <span id="year"></span> Designed and developed by MtaaniWeb. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/254726066474?text=Hi%20JOMUL%20Construction%2C%20I%27d%20like%20to%20get%20in%20touch." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M12.01 2C6.5 2 2 6.48 2 12c0 1.84.5 3.55 1.36 5.03L2 22l5.12-1.34A9.96 9.96 0 0012 22c5.52 0 10-4.48 10-10S17.53 2 12.01 2zm0 18.14c-1.62 0-3.14-.47-4.42-1.29l-.32-.19-3.03.8.81-2.95-.2-.3A8.13 8.13 0 013.87 12c0-4.49 3.65-8.14 8.14-8.14S20.15 7.51 20.15 12s-3.65 8.14-8.14 8.14zm4.48-6.07c-.24-.12-1.44-.71-1.66-.79-.22-.08-.39-.12-.55.12-.16.24-.63.79-.78.95-.14.16-.28.18-.53.06-.24-.12-1.02-.38-1.95-1.2-.72-.64-1.2-1.44-1.35-1.68-.14-.24-.02-.37.11-.49.11-.11.24-.28.36-.43.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.32-.75-1.8-.2-.48-.4-.42-.55-.42h-.47c-.16 0-.42.06-.64.3-.22.24-.85.83-.85 2.02s.87 2.35.99 2.51c.12.16 1.72 2.63 4.17 3.68.58.25 1.04.4 1.39.51.58.19 1.11.16 1.53.1.47-.07 1.44-.59 1.64-1.15.2-.57.2-1.06.14-1.15-.06-.1-.22-.16-.46-.28z"/></svg>
+</a>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // mobile nav
+  const burgerBtn = document.getElementById('burgerBtn');
+  const closeBtn = document.getElementById('closeBtn');
+  const panel = document.getElementById('mobilePanel');
+  const scrim = document.getElementById('scrim');
+  function openPanel(){ panel.classList.add('open'); scrim.classList.add('show'); }
+  function closePanel(){ panel.classList.remove('open'); scrim.classList.remove('show'); }
+  burgerBtn.addEventListener('click', openPanel);
+  closeBtn.addEventListener('click', closePanel);
+  scrim.addEventListener('click', closePanel);
+  panel.querySelectorAll('a').forEach(a => a.addEventListener('click', closePanel));
+
+  // project data + render
+  const projects = [
+    { title:"Residential Build", cat:"residential", label:"Residential", desc:"A full family home delivered from foundation to finishes in Nairobi.", img:"https://res.cloudinary.com/hztm3zo8/image/upload/v1788596598/1788593488921_c5pskf.jpg" },
+    { title:"Commercial Fit-Out", cat:"commercial", label:"Commercial", desc:"Office fit-out completed on schedule for a growing Nairobi business.", img:"https://res.cloudinary.com/hztm3zo8/image/upload/v1788599182/1788593626956_oxadni.jpg" },
+    { title:"Industrial Facility", cat:"industrial", label:"Industrial", desc:"A production facility engineered for durability and daily operations.", img:"https://res.cloudinary.com/hztm3zo8/image/upload/v1788596852/3146f1156bb067e5352ad36608c7f203_uslqiy.jpg" },
+    { title:"Home Extension", cat:"residential", label:"Residential", desc:"An extension planned around how the family actually lives day to day.", img:"https://res.cloudinary.com/hztm3zo8/image/upload/v1788596622/1788593468852_i8kbdq.jpg" },
+    { title:"Retail Space", cat:"commercial", label:"Commercial", desc:"A retail fit-out designed to open its doors exactly on time.", img:"https://res.cloudinary.com/hztm3zo8/image/upload/v1788596821/f414d87af38e0163d0ad2ae615ab9e7c_bxnje3.jpg" },
+    { title:"Ongoing Build", cat:"residential", label:"In Progress", desc:"A current residential build, updated with our clients at every milestone.", img:"https://res.cloudinary.com/hztm3zo8/image/upload/v1788596750/1788593821718_rqiwtj.jpg" },
+    { title:"Warehouse Build", cat:"industrial", label:"Industrial", desc:"Warehouse construction built for durability and everyday demands.", img:"https://res.cloudinary.com/hztm3zo8/image/upload/v1788596797/d96a83796db3f08e533b37f301300316_jbiwst.jpg" },
+    { title:"Office Development", cat:"commercial", label:"Commercial", desc:"A mixed-use office development delivered with full project management.", img:"https://res.cloudinary.com/hztm3zo8/image/upload/v1788596772/5737e6d1605a8ea9f4c53ac0dd66a7a6_kklxt1.jpg" }
+  ];
+
+  const colorMap = {
+    residential: ['#1E7A46','#2FA360'],
+    commercial: ['#0F2A44','#17395C'],
+    industrial: ['#17395C','#1E7A46']
+  };
+
+  function thumbSVG(cat){
+    const c = colorMap[cat] || colorMap.residential;
+    const c1 = c[0], c2 = c[1];
+    return '<svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">' +
+      '<rect width="400" height="300" fill="' + c1 + '"/>' +
+      '<g stroke="' + c2 + '" stroke-width="1.2" opacity="0.5">' +
+      '<line x1="0" y1="100" x2="400" y2="100"/><line x1="0" y1="200" x2="400" y2="200"/>' +
+      '<line x1="133" y1="0" x2="133" y2="300"/><line x1="266" y1="0" x2="266" y2="300"/></g>' +
+      '<rect x="70" y="120" width="90" height="130" fill="none" stroke="' + c2 + '" stroke-width="2"/>' +
+      '<rect x="200" y="70" width="120" height="180" fill="none" stroke="' + c2 + '" stroke-width="2"/>' +
+      '<rect x="90" y="150" width="20" height="24" fill="' + c2 + '" opacity="0.5"/>' +
+      '<rect x="120" y="150" width="20" height="24" fill="' + c2 + '" opacity="0.5"/>' +
+      '<rect x="90" y="195" width="20" height="24" fill="' + c2 + '" opacity="0.5"/>' +
+      '<rect x="120" y="195" width="20" height="24" fill="' + c2 + '" opacity="0.5"/>' +
+      '<rect x="220" y="100" width="24" height="28" fill="' + c2 + '" opacity="0.5"/>' +
+      '<rect x="270" y="100" width="24" height="28" fill="' + c2 + '" opacity="0.5"/>' +
+      '<rect x="220" y="160" width="24" height="28" fill="' + c2 + '" opacity="0.5"/>' +
+      '<rect x="270" y="160" width="24" height="28" fill="' + c2 + '" opacity="0.5"/>' +
+      '</svg>';
+  }
+
+  const grid = document.getElementById('projectsGrid');
+  grid.innerHTML = projects.map(p =>
+    '<div class="project-card reveal" data-cat="' + p.cat + '">' +
+      '<div class="project-thumb">' + thumbSVG(p.cat) +
+        '<img src="' + p.img + '" alt="' + p.title + ' by JOMUL Construction" loading="lazy" onerror="this.style.display=\'none\'">' +
+        '<span class="project-tag">' + p.label + '</span>' +
+      '</div>' +
+      '<div class="project-body"><h3>' + p.title + '</h3><p>' + p.desc + '</p></div>' +
+    '</div>'
+  ).join('');
+
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const f = btn.dataset.filter;
+      document.querySelectorAll('.project-card').forEach(card => {
+        card.hidden = (f !== 'all' && card.dataset.cat !== f);
+      });
+    });
+  });
+
+  // reveal on scroll
+  const revealTargets = document.querySelectorAll('.reveal');
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting){
+        entry.target.classList.add('in');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  revealTargets.forEach(el => revealObserver.observe(el));
+
+  // animated stat counters
+  const statEls = document.querySelectorAll('.stat .num');
+  const statsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting){
+        const el = entry.target;
+        const target = parseInt(el.getAttribute('data-target'), 10);
+        const countEl = el.querySelector('.count');
+        const duration = 1300;
+        const start = performance.now();
+        function tick(now){
+          const progress = Math.min((now - start) / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          countEl.textContent = Math.round(eased * target);
+          if (progress < 1) requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+        statsObserver.unobserve(el);
+      }
+    });
+  }, { threshold: 0.4 });
+  statEls.forEach(el => statsObserver.observe(el));
+
+  // quote form -> WhatsApp
+  document.getElementById('quoteForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    const name = document.getElementById('qName').value.trim();
+    const phone = document.getElementById('qPhone').value.trim();
+    const type = document.getElementById('qType').value;
+    const location = document.getElementById('qLocation').value.trim();
+    const message = document.getElementById('qMessage').value.trim();
+
+    let text = 'Hi JOMUL Construction, I would like to request a quote.\\n\\n';
+    text += 'Name: ' + name + '\\n';
+    text += 'Phone: ' + phone + '\\n';
+    if (type) text += 'Project type: ' + type + '\\n';
+    if (location) text += 'Location: ' + location + '\\n';
+    if (message) text += 'Details: ' + message + '\\n';
+
+    const url = 'https://wa.me/254726066474?text=' + encodeURIComponent(text);
+    window.open(url, '_blank');
+  });
+</script>
+
+</body>
+</html>
